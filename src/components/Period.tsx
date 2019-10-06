@@ -15,7 +15,7 @@ class Period extends React.Component<{}, PeriodState> {
     }
 
     handleChange(e: React.FormEvent<HTMLSelectElement>) {
-        this.setState({ period: e.Target.value })        
+        this.setState({ period: e.currentTarget.value })        
     }
 
     render() {
