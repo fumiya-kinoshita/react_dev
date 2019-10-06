@@ -1,26 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import * as React from 'react';
 
-const App: React.FC = () => {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import Weekday from './components/Weekday';
+import Period from './components/Period';
+import Subject from './components/Subject';
+import PeriodTable from './components/PeriodTable';
+
+class App extends React.Component {
+  render() {
+    return(
+      <div>
+        <Weekday />
+        <Period />
+        <Subject />
+        <PeriodTable />
+      </div>
+    )
+  }
+};
 
 export default App;
