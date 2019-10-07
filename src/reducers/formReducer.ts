@@ -1,10 +1,14 @@
-import * as React from 'react';
 
 const initialState = {
     period: "一限目",
     subject: "",
     weekday: "月曜日"
+}
 
+interface IState {
+    period: string,
+    subject: string,
+    weekday: string
 }
 
 interface IAction {
@@ -13,7 +17,7 @@ interface IAction {
 }
 
 const formReducer = (
-    state = initialState,
+    state: IState = initialState,
     action: IAction
 ) => {
     switch(action.type) {
@@ -36,7 +40,7 @@ const formReducer = (
             }
         break;
         default:
-        break;
+            return state;
     }
 }
 

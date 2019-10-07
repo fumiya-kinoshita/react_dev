@@ -3,13 +3,17 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { createStore, combineReducers } from 'redux'
+import { Provider } from 'react-redux';
 
-import formReducer from './reducers/formReducer'
+import formReducer from './reducers/formReducer';
+import userReducer from './reducers/userReducers';
 
-const store = createStore(combineReducers(formReducer));
+export const store = createStore(combineReducers({formReducer, userReducer}))
 
 ReactDOM.render(
-<App />,
+<Provider store={store}>
+    <App />
+</Provider>,
 document.getElementById('root')
 );
 
