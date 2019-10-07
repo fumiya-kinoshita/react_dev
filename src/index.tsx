@@ -3,13 +3,16 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { createStore, combineReducers } from 'redux'
+import { Provider} from 'react-redux';
 
 import formReducer from './reducers/formReducer'
 
 const store = createStore(combineReducers(formReducer));
 
 ReactDOM.render(
-<App />,
+<Provider store={store}>
+    <App />
+</Provider>,
 document.getElementById('root')
 );
 

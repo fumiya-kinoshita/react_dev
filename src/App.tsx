@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { createStore } from 'redux'
 
 import Weekday from './components/Weekday';
 import Period from './components/Period';
