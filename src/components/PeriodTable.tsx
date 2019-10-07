@@ -5,7 +5,6 @@ class PeriodTable extends React.Component {
 
     render() {
         const weekday = ["月曜", "火曜", "水曜", "木曜", "金曜"];
-        const period = ["一限目", "二限目", "三限目", "四限目", "五限目", "六限目"];
         let i;
         let periodRowFirst = [];
         let periodRowSecond = [];
