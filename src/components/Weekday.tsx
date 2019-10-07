@@ -10,13 +10,20 @@ class Weekday extends React.Component<{}, WeekdayState> {
         this.state = {
             weekday: ""
         }
+
+        this.handleChange = this.handleChange.bind(this);
+
+    }
+
+    handleChange(e: React.FormEvent<HTMLSelectElement>) {
+        this.setState({ weekday: e.currentTarget.value });
     }
 
     render() {
         return(
             <div>
                 <form>
-                    <select>
+                    <select value={this.state.weekday} onChange={this.handleChange}>
                         <option value="月曜日">月曜日</option>
                         <option value="火曜日">火曜日</option>
                         <option value="水曜日">水曜日</option>
@@ -24,6 +31,7 @@ class Weekday extends React.Component<{}, WeekdayState> {
                         <option value="金曜日">金曜日</option>
                     </select>
                 </form>
+                {this.state.weekday}
             </div>
         )
     }
